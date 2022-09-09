@@ -2,14 +2,15 @@ package com.mertbaykal.ktortest.android
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.mertbaykal.ktortest.Greeting
 import android.widget.TextView
-import kotlinx.coroutines.MainScope
-import kotlinx.coroutines.launch
+import androidx.lifecycle.ViewModelProvider
+import com.mertbaykal.ktortest.CommonViewModel
 
 class MainActivity : AppCompatActivity() {
-    val mainScope = MainScope()
-    val greeting = Greeting()
+
+    val viewModel: CommonViewModel by lazy {
+        ViewModelProvider(this)[CommonViewModel::class.java]
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,15 +18,5 @@ class MainActivity : AppCompatActivity() {
 
         val tv: TextView = findViewById(R.id.text_view)
 
-        mainScope.launch {
-            kotlin.runCatching {
-                tv.text = "Loading..."
-                greeting.getPopularMovies()
-            }
-                .onSuccess {
-                    tv.text = it
-                }
-                .onFailure { tv.text = "Error: ${it.localizedMessage}" }
-        }
     }
 }

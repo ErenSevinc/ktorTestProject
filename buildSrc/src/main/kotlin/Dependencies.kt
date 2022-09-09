@@ -4,6 +4,7 @@ object Versions {
     const val ktor = "2.1.0"
     const val coroutines = "1.6.4"
     const val kotlinxSerializationCore = "1.3.3"
+    const val lifecycle = "2.4.1"
 }
 
 object Libraries {
@@ -12,6 +13,8 @@ object Libraries {
     const val gradle = "com.android.tools.build:gradle:${Versions.gradle}"
 
     const val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
+    const val liveData = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
+    const val viewModelLifeCycle = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
 
     object Shared {
         object Common {
@@ -35,6 +38,7 @@ object Libraries {
     }
 
     object AndroidApp {
+        const val liveData = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
         const val ktorCoroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
     }
 

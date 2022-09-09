@@ -43,6 +43,7 @@ kotlin {
             dependencies {
                 implementation(Libraries.Shared.Android.ktorClient)
                 implementation(Libraries.Shared.Android.coroutinesAndroid)
+                implementation(Libraries.viewModelLifeCycle)
             }
         }
         val androidTest by getting
