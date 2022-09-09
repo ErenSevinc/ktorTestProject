@@ -30,5 +30,4 @@ dependencies {
 
     implementation(Libraries.coroutinesCore)
     implementation(Libraries.AndroidApp.ktorCoroutinesAndroid)
-    implementation(Libraries.AndroidApp.liveData)
 }

@@ -1,6 +1,6 @@
 package com.mertbaykal.ktortest.data.network.service
 
-import com.mertbaykal.ktortest.data.network.module.NetworkModule
+import com.mertbaykal.ktortest.data.network.NetworkModule
 import io.ktor.client.*
 import io.ktor.client.request.*
 import io.ktor.client.statement.*

@@ -1,4 +1,4 @@
-package com.mertbaykal.ktortest.data.network.module
+package com.mertbaykal.ktortest.data.network
 
 
 import io.ktor.client.*

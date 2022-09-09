@@ -13,7 +13,6 @@ object Libraries {
     const val gradle = "com.android.tools.build:gradle:${Versions.gradle}"
 
     const val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
-    const val liveData = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
     const val viewModelLifeCycle = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
 
     object Shared {
