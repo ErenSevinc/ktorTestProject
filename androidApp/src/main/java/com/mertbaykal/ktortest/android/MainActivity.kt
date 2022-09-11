@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
                 ) {
                     Text(
                         text = this@with?.results?.get(0)?.overview.toString(),
-                        fontSize = 20.sp
+                        fontSize = 18.sp
                     )
                 }
             }
