@@ -11,7 +11,7 @@ class NetworkModule {
 
     companion object {
 
-        const val BASE_URL = "https://api.themoviedb.org/3/"
+        const val BASE_URL = "https://api.themoviedb.org/"
         const val API_KEY = "6a3250b8b666ace2104278cd40e42255"
 
         fun getClient(): HttpClient {
@@ -24,6 +24,7 @@ class NetworkModule {
                 }
 
                 install(Logging) {
+                    logger = Logger.DEFAULT
                     level = LogLevel.ALL
                 }
             }

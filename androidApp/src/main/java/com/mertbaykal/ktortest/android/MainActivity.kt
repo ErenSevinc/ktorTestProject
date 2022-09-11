@@ -1,22 +1,40 @@
 package com.mertbaykal.ktortest.android
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.Text
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.ViewModelProvider
 import com.mertbaykal.ktortest.CommonViewModel
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : ComponentActivity() {
 
-    val viewModel: CommonViewModel by lazy {
-        ViewModelProvider(this)[CommonViewModel::class.java]
-    }
+    private lateinit var viewModel: CommonViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        viewModel = ViewModelProvider(this)[CommonViewModel::class.java]
 
-        val tv: TextView = findViewById(R.id.text_view)
+        setContent {
+            val movies by viewModel.popularMovies.collectAsState()
 
+            with(movies) {
+                Box(
+                    modifier = Modifier.fillMaxSize(),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text = this@with?.results?.get(0)?.overview.toString(),
+                        fontSize = 20.sp
+                    )
+                }
+            }
+        }
     }
 }

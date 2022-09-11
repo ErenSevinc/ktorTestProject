@@ -38,11 +38,11 @@ data class MovieItem(
     @SerialName("backdrop_path")
     val backdropPath:String?,
     @SerialName("popularity")
-    val popularity:Long?,
+    val popularity:Double?,
     @SerialName("vote_count")
     val voteCount:Long?,
     @SerialName("video")
     val video:Boolean?,
     @SerialName("vote_average")
-    val voteAverage:Long?
+    val voteAverage:Double?
 )

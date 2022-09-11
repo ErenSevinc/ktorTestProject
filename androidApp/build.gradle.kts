@@ -18,7 +18,10 @@ android {
         }
     }
     buildFeatures {
-        dataBinding = true
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = Versions.compose
     }
 }
 
@@ -30,4 +33,9 @@ dependencies {
 
     implementation(Libraries.coroutinesCore)
     implementation(Libraries.AndroidApp.ktorCoroutinesAndroid)
+    implementation(Libraries.AndroidApp.composeUI)
+    implementation(Libraries.AndroidApp.composeUITooling)
+    implementation(Libraries.AndroidApp.composeMaterial)
+    implementation(Libraries.AndroidApp.composeFoundation)
+    implementation(Libraries.AndroidApp.composeActivity)
 }

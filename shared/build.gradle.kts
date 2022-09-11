@@ -30,6 +30,7 @@ kotlin {
                 implementation(Libraries.Shared.Common.ktorCore)
                 implementation(Libraries.Shared.Common.ktorJson)
                 implementation(Libraries.Shared.Common.ktorLogging)
+                implementation(Libraries.Shared.Common.logback)
                 implementation(Libraries.Shared.Common.ktorSerialization)
                 implementation(Libraries.Shared.Common.ktorContentNegotiation)
                 implementation(Libraries.Shared.Common.ktorSerializationJson)
